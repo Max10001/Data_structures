@@ -1,6 +1,5 @@
 from linked_list import Node
 
-
 class Stack:
 
     def __init__(self):
@@ -22,19 +21,18 @@ class Stack:
         self.head = node.next
         return node
 
-    def vizualizations(self):
+    def vizualization(self):
         node = self.head
         while node:
             print(node.data)
             node = node.next
 
+    if __name__ == "__main__":
+        stack = Stack()
+        stack.push(Node(15))
+        stack.push(Node(20))
+        stack.push(Node(55))
+        stack.push(Node(13))
 
-if __name__ == "__main__":
-    stack = Stack()
-    stack.push(Node(15))
-    stack.push(Node(20))
-    stack.push(Node(55))
-    stack.push(Node(13))
-
-    print('recent element:', stack.pop().data)
-    stack.vizualizations()
+        print('recent element:', stack.pop().data)
+        stack.vizualization()
