@@ -1,4 +1,9 @@
-from linked_list import Node
+class Node:
+
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
 
 class Stack:
 
@@ -6,7 +11,7 @@ class Stack:
         self.head = None
 
     def push(self, node):
-        if self.head in None:
+        if self.head is None:
             self.head = node
             return
 
@@ -27,12 +32,13 @@ class Stack:
             print(node.data)
             node = node.next
 
-    if __name__ == "__main__":
-        stack = Stack()
-        stack.push(Node(15))
-        stack.push(Node(20))
-        stack.push(Node(55))
-        stack.push(Node(13))
 
-        print('recent element:', stack.pop().data)
-        stack.vizualization()
+if __name__ == "__main__":
+    stack = Stack()
+    stack.push(Node(15))
+    stack.push(Node(20))
+    stack.push(Node(55))
+    stack.push(Node(13))
+
+    print('recent element:', stack.pop().data)
+    stack.vizualization()
